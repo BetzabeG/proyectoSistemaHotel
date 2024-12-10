@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="favicon.png">
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="../css/tiny-slider.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <title>Sistema de Gestión de Hotel</title>
+
+  <style>
+    /* Estilos para el menú desplegable */
+    .nav-item .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #3b5d50;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Mostrar submenú al pasar el ratón */
+    .nav-item:hover > .dropdown-menu {
+      display: block;
+    }
+  
+    .dropdown-item {
+      color: black;
+      text-decoration: none;
+    }
+  
+    .dropdown-item:hover {
+      background-color: #f1f1f1;
+    }
+    /* Estilos para la sección de Introducción */
+    .intro-section {
+      background-color: #f5f5f5;
+      padding: 60px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: justify;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .intro-section h2 {
+      text-align: center;
+      color: #3b5d50;
+      margin-bottom: 30px;
+    }
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+
+    
+  </style>
+</head>
+
+<body>
+
+    <!-- Start Header/Navigation -->
+<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html"><span>ANALISIS Y DISEÑO <br>DE SISTEMAS</span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsFurni">
+      <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+        <!-- Inicio -->
+        <li><a class="nav-link" href="../index.html">Inicio</a></li>
+
+        <!-- Generalidades con menú desplegable -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="../index.html">Generalidades</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="../Generalidades/1intro.html">INTRODUCCIÓN</a>
+            <a class="dropdown-item" href="../Generalidades/2ante.html">ANTECEDENTES</a>
+            <a class="dropdown-item" href="../Generalidades/3plan.html">PLANTEAMIENTO DEL PROBLEMA</a>
+            <a class="dropdown-item" href="../Generalidades/4arb.html">ÁRBOL DE PROBLEMAS</a>
+            <a class="dropdown-item" href="../Generalidades/5for.html">FORMULACIÓN DEL PROBLEMA</a>
+            <a class="dropdown-item" href="../Generalidades/6pro.html">PROPÓSITO DEL ESTUDIO</a>
+            <a class="dropdown-item" href="../Generalidades/7met.html">MÉTODO, MEDIOS E INSTRUMENTOS DE INVESTIGACIÓN</a>
+            <a class="dropdown-item" href="../Generalidades/8plant.html">PLANIFICACIÓN DE ACTIVIDADES</a>
+          </div>
+        </li>
+        <!-- Análisis y Diseño Estructurado con submenús -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="../index.html">Análisis y Diseño Estructurado</a>
+          <div class="dropdown-menu">
+            <!-- Modelo Ambiental con submenú -->
+            <div class="nav-item dropdown">
+              <a class="dropdown-item dropdown-toggle" href="../index.html">MODELO AMBIENTAL</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../AnalisisEstructurado/ma_declaracionObj.html">DECLARACION DE PROPOSITOS</a>
+                <a class="dropdown-item" href="../AnalisisEstructurado/ma_diagramaContex.html">DIAGRAMA CONTEXTO</a>
+                <a class="dropdown-item" href="../AnalisisEstructurado/ma_listaAcont.html">LISTA DE ACONTECIMIENTOS</a>
+              </div>
+            </div>
+            <!-- Modelo Comportamiento -->
+            <div class="nav-item dropdown">
+              <a class="dropdown-item dropdown-toggle" href="../index.html">MODELO COMPORTAMIENTO</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../AnalisisEstructurado/mc_dfd.html">DIAGRAMA DE FLUJO DE DATOS (DFD)</a>
+                <a class="dropdown-item" href="../AnalisisEstructurado/mc_der.html">DIAGRAMA ENTIDAD RELACION (DER)</a>
+                <a class="dropdown-item" href="../AnalisisEstructurado/mc_diccionarios.html">DICCIONARIO DE DATOS</a>
+                <a class="dropdown-item" href="../AnalisisEstructurado/mc_procesos.html">ESPECIFICACION DE PROCESOS</a>
+              </div>
+            </div>
+
+          </div>
+          
+        </li>
+        <li><a class="nav-link" href="../orientado_objetos.html">Orientado a Objetos</a></li>
+        <!-- Video -->
+        <li><a class="nav-link" href="../video.html">Video Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Header/Navigation -->
+  
+
+  <!-- Start Introducción Section -->
+  <section class="intro-section">
+    <h2>Introducción</h2>
+    <p>En la actualidad, la industria hotelera está viviendo una transformación notable gracias a la era digital. Cada vez más, los hoteles se ven impulsados a optimizar sus operaciones y a mejorar la experiencia de sus huéspedes. La gestión hotelera moderna exige el uso de soluciones tecnológicas que faciliten la administración de todos los aspectos operativos: desde las reservas hasta la facturación de servicios.</p>
+    <p>Los sistemas de gestión hotelera se han vuelto esenciales para que los hoteles se mantengan competitivos en un mercado que no deja de crecer y volverse más exigente. Al automatizar procesos, no solo se minimizan los errores humanos y se optimizan los recursos; también se puede ofrecer un servicio más personalizado y eficiente a los visitantes.</p>
+    <p>En Bolivia, el sector hotelero es fundamental dentro de la industria turística. Con una creciente cantidad de establecimientos de hospedaje, que incluyen desde hoteles boutique hasta grandes cadenas, se requiere contar con sistemas eficientes para manejar sus operaciones diarias. Adoptar tecnologías modernas en la gestión hotelera no es simplemente una moda: es una necesidad para garantizar altos estándares de calidad y eficiencia operativa.</p>
+  </section>
+  <!-- End Introducción Section -->
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+<footer class="footer-section">
+  <div class="container relative">
+
+    <div class="row g-5 mb-5">
+      <div class="col-lg-4">
+        <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Hotel Presidente<span>.</span></a></div>
+        <ul class="list-unstyled custom-social">
+          <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-top copyright">
+      <div class="row pt-4">
+        <div class="col-lg-6">
+          <p class="mb-2 text-center text-lg-start">Daniel or by</script> <a href="https://untree.co">   <br></a> Ven con nosotros <a hreff="https://themewagon.com">Danielorby</a>  <!-- License information: https://untree.co/license/ -->
+        </p>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-end">
+          <ul class="list-unstyled d-inline-flex ms-auto">
+            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+</html>
