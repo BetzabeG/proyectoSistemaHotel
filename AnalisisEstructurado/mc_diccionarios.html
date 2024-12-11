@@ -14,7 +14,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="../css/tiny-slider.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
-  <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+  <title>Analisis Sistema Hotelera</title>
 
   <style>
     /* Estilo general para el menú desplegable */
@@ -107,45 +107,153 @@
         </div>
       </div>
     </nav>
-    <!-- End Header/Navigation -->
 
-
-    <!-- Start Árbol de Problemas Section -->
-<section class="bg-light py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="text-center mb-4">
-            <h2 class="mb-3" style="color: #3b5d50;">DICCIONARIO FALTA!</h2>
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="text-center mb-4">
+              <h2 class="mb-3" style="color: #3b5d50;">DICCIONARIO DE DATOS</h2>
+            </div>
+            
+            <!-- Explicación del Árbol de Problemas -->
+            <div>
+              <ul style="color: #333; font-size: 1.1rem; line-height: 1.8;">
+                <li><strong>Huésped</strong>
+                  <p>Huésped := { huésped } ** Representa a los huéspedes registrados en el sistema **</p>
+                  <p>huésped := @idHuesped + nombre + apellido + telefono + email + tipoCliente</p>
+                  <ul>
+                    <li>idHuesped := 1 { dígito } 999999 ** Identificador único del huésped **</li>
+                    <li>nombre := 1 { caracter_válido } 50 ** Nombre del huésped **</li>
+                    <li>apellido := 1 { caracter_válido } 50 ** Apellido del huésped **</li>
+                    <li>telefono := 1 { dígito } 15 ** Número de teléfono del huésped **</li>
+                    <li>email := 1 { caracter_válido } 100 ** Correo electrónico del huésped **</li>
+                    <li>tipoCliente := [ frecuente | nuevo ] ** Tipo de cliente **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Reserva</strong>
+                  <p>Reserva := { reserva } ** Representa las reservas realizadas en el sistema **</p>
+                  <p>reserva := @idReserva + fechaReserva + fechaInicio + fechaFin + estadoReserva + tipoReserva</p>
+                  <ul>
+                    <li>idReserva := 1 { dígito } 999999 ** Identificador único de la reserva **</li>
+                    <li>fechaReserva := fecha ** Fecha en que se realizó la reserva **</li>
+                    <li>fechaInicio := fecha ** Fecha de inicio de la estancia **</li>
+                    <li>fechaFin := fecha ** Fecha de fin de la estancia **</li>
+                    <li>estadoReserva := [ confirmada | cancelada | en espera ] ** Estado actual de la reserva **</li>
+                    <li>tipoReserva := [ habitual | modificación | cancelación ] ** Tipo de reserva **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Habitación</strong>
+                  <p>Habitación := { habitación } ** Representa las habitaciones del hotel **</p>
+                  <p>habitación := @idHabitacion + numero + tipo + estado + precioDiurno</p>
+                  <ul>
+                    <li>idHabitacion := 1 { dígito } 999 ** Identificador único de la habitación **</li>
+                    <li>numero := 1 { dígito } 3 ** Número de la habitación **</li>
+                    <li>tipo := [ simple | doble | suite ] ** Tipo de habitación **</li>
+                    <li>estado := [ disponible | ocupada | en mantenimiento ] ** Estado de la habitación **</li>
+                    <li>precioDiurno := decimal ** Precio por noche de la habitación **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Factura</strong>
+                  <p>Factura := { factura } ** Representa las facturas emitidas en el sistema **</p>
+                  <p>factura := @idFactura + fechaEmision + total + estadoPago</p>
+                  <ul>
+                    <li>idFactura := 1 { dígito } 999999 ** Identificador único de la factura **</li>
+                    <li>fechaEmision := fecha ** Fecha de emisión de la factura **</li>
+                    <li>total := decimal ** Monto total de la factura **</li>
+                    <li>estadoPago := [ pendiente | pagada ] ** Estado del pago de la factura **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Pago</strong>
+                  <p>Pago := { pago } ** Representa los pagos realizados por los huéspedes **</p>
+                  <p>pago := @idPago + monto + fechaPago + metodoPago + estadoPago</p>
+                  <ul>
+                    <li>idPago := 1 { dígito } 999999 ** Identificador único del pago **</li>
+                    <li>monto := decimal ** Monto del pago **</li>
+                    <li>fechaPago := fecha ** Fecha en que se realizó el pago **</li>
+                    <li>metodoPago := [ tarjeta | efectivo ] ** Método de pago utilizado **</li>
+                    <li>estadoPago := [ procesado | pendiente ] ** Estado del pago **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Servicio</strong>
+                  <p>Servicio := { servicio } ** Representa los servicios adicionales solicitados **</p>
+                  <p>servicio := @idServicio + nombre + descripcion + costo</p>
+                  <ul>
+                    <li>idServicio := 1 { dígito } 999 ** Identificador único del servicio **</li>
+                    <li>nombre := 1 { caracter_válido } 50 ** Nombre del servicio **</li>
+                    <li>descripcion := 1 { caracter_válido } 200 ** Descripción del servicio **</li>
+                    <li>costo := decimal ** Costo del servicio **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Evaluación</strong>
+                  <p>Evaluación := { evaluación } ** Representa las evaluaciones emitidas por los huéspedes **</p>
+                  <p>evaluación := @idEvaluacion + puntuacion + comentario + fechaEvaluacion</p>
+                  <ul>
+                    <li>idEvaluacion := 1 { dígito } 999999 ** Identificador único de la evaluación **</li>
+                    <li>puntuacion := [ 1 | 2 | 3 | 4 | 5 ] ** Puntuación otorgada por el huésped **</li>
+                    <li>comentario := 1 { caracter_válido } 500 ** Comentarios adicionales **</li>
+                    <li>fechaEvaluacion := fecha ** Fecha de la evaluación **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Empleado</strong>
+                  <p>Empleado := { empleado } ** Representa al personal del hotel **</p>
+                  <p>empleado := @idEmpleado + nombre + apellido + rol + turno</p>
+                  <ul>
+                    <li>idEmpleado := 1 { dígito } 999999 ** Identificador único del empleado **</li>
+                    <li>nombre := 1 { caracter_válido } 50 ** Nombre del empleado **</li>
+                    <li>apellido := 1 { caracter_válido } 50 ** Apellido del empleado **</li>
+                    <li>rol := [ limpieza | mantenimiento | gerente ] ** Rol del empleado **</li>
+                    <li>turno := [ mañana | tarde | noche ] ** Turno asignado al empleado **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Tarea</strong>
+                  <p>Tarea := { tarea } ** Representa las tareas asignadas al personal **</p>
+                  <p>tarea := @idTarea + tipoTarea + descripcion + fechaAsignacion + estado</p>
+                  <ul>
+                    <li>idTarea := 1 { dígito } 999999 ** Identificador único de la tarea **</li>
+                    <li>tipoTarea := [ limpieza | mantenimiento ] ** Tipo de tarea **</li>
+                    <li>descripcion := 1 { caracter_válido } 200 ** Descripción de la tarea **</li>
+                    <li>fechaAsignacion := fecha ** Fecha en que se asignó la tarea **</li>
+                    <li>estado := [ pendiente | completada ] ** Estado actual de la tarea **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Inventario</strong>
+                  <p>Inventario := { inventario } ** Representa los recursos controlados por el hotel **</p>
+                  <p>inventario := @idInventario + nombreRecurso + cantidad + fechaUltimaActualizacion</p>
+                  <ul>
+                    <li>idInventario := 1 { dígito } 999999 ** Identificador único del recurso **</li>
+                    <li>nombreRecurso := 1 { caracter_válido } 50 ** Nombre del recurso **</li>
+                    <li>cantidad := entero ** Cantidad disponible del recurso **</li>
+                    <li>fechaUltimaActualizacion := fecha ** Última actualización del inventario **</li>
+                  </ul>
+                </li>
+    
+                <li><strong>Reporte</strong>
+                  <p>Reporte := { reporte } ** Representa los reportes generados en el sistema **</p>
+                  <p>reporte := @idReporte + tipoReporte + fechaGeneracion + descripcion</p>
+                  <ul>
+                    <li>idReporte := 1 { dígito } 999999 ** Identificador único del reporte **</li>
+                    <li>tipoReporte := [ financiero | ocupación ] ** Tipo de reporte **</li>
+                    <li>fechaGeneracion := fecha ** Fecha en que se generó el reporte **</li>
+                    <li>descripcion := 1 { caracter_válido } 200 ** Descripción del reporte **</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+    
           </div>
-          
-          <div class="text-center mb-4">
-            <img src="../images/h5.png" alt="Árbol de problemas" class="img-fluid" style="max-width: 80%; height: auto;">
-          </div>
-          <!-- Explicación del Árbol de Problemas -->
-          <div>
-            <h4 style="color: #3b5d50;">Explicación del Árbol de Problemas</h4>
-            <ul style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-              <li><strong>Procesos manuales →</strong> Errores operativos → Pérdidas económicas</li>
-              <li><strong>Información fragmentada →</strong> Mala comunicación → Servicio deficiente</li>
-              <li><strong>Control inadecuado →</strong> Desperdicio de recursos → Baja rentabilidad</li>
-              <li><strong>Personal mal gestionado →</strong> Servicio lento → Insatisfacción del cliente</li>
-              <li><strong>Tecnología obsoleta →</strong> Procesos ineficientes → Pérdida de competitividad</li>
-            </ul>
-          </div>
-  
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Árbol de Problemas Section -->
-  
-  <!-- Start Planteamiento del Problema Section -->
-  
-  <!-- Aquí continúa el contenido de tu página -->
-
-
-
+    </section>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/tiny-slider.js"></script>
   <script src="js/custom.js"></script>
